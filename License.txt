@@ -1,0 +1,20 @@
+LICENSE INFORMATION:
+
+Creative Commons, CC-BY-NC-SA.
+This model is adapted from the Alpha Simulations Sea Fury model.
+
+
+TO USE:
+
+This model is adapted for use with the FlightGear open-source
+flight simulator.  To that end, the original model was
+converted from MDL to AC3D format, and the texture were
+converted from BMP to RGB (SGI) format.  The animations are
+done using FlightGear's XML-based animation format.  The JSBSim
+flight model is adapted from a FW-190 model which was produced by
+Aeromatic and David Culp (see http://jsbsim.sourceforge.net/).
+
+
+David Culp
+davidculp@cox.net 
+

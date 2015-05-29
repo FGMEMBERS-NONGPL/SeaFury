@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+
+ <fx>
+
+
+  <crank>
+   <name>engstart</name>
+   <path>Aircraft/SeaFury/Sounds/Censtart.wav</path>
+   <property>engines/engine/cranking</property>
+   <volume>
+    <offset>-0.4</offset>
+   </volume>
+  </crank>
+
+<!--
+  <crank>
+   <name>crank</name>
+   <mode>looped</mode>
+   <path>Aircraft/A-1H/Sounds/Censtart.wav</path>
+   <condition>
+    <property>/engines/engine/cranking</property>
+    <not>
+     <property>/engines/engine/running</property>
+    </not>
+   </condition>
+   <volume>
+    <offset>-0.5</offset>
+   </volume>
+   <pitch>
+    <property>/engines/engine/cranking</property>
+    <factor>1.0</factor>
+   </pitch>
+  </crank>
+
+  <crank>
+   <name>cough</name>
+   <path>Aircraft/p51d/Sounds/p51d_startup.wav</path>
+   <property>/engines/engine/running</property>
+   <volume>
+    <offset>-0.50</offset>
+   </volume>
+   <pitch>
+    <property>/engines/engine/running</property>
+    <factor>1.0</factor>
+   </pitch>
+  </crank>
+-->
+
+  <engine>
+   <name>engine-exterior</name>
+   <mode>looped</mode>
+   <path>Aircraft/SeaFury/Sounds/Cent_rev4.wav</path>
+   <condition>
+    <property>engines/engine/running</property>
+    <not>
+      <property>sim/current-view/internal</property>
+    </not>
+   </condition>
+   <volume>
+    <property>engines/engine/rpm</property>
+    <factor>0.00025</factor>
+    <min>0.2</min>
+    <max>1.0</max>
+    <offset>0.0</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine/rpm</property>
+    <factor>0.00005</factor>
+    <min>0</min>
+    <max>0.2</max>
+   </pitch>
+  </engine>
+
+  <engine>
+   <name>engine-interior</name>
+   <mode>looped</mode>
+   <path>Aircraft/SeaFury/Sounds/Cent_rev4.wav</path>
+   <condition>
+    <property>engines/engine/running</property>
+    <property>sim/current-view/internal</property>
+   </condition>
+   <volume>
+    <property>engines/engine/rpm</property>
+    <factor>0.0001</factor>
+    <min>0.05</min>
+    <max>0.4</max>
+    <offset>0.0</offset>
+   </volume>
+   <pitch>
+    <property>engines/engine/rpm</property>
+    <factor>0.00005</factor>
+    <min>0</min>
+    <max>0.2</max>
+   </pitch>
+  </engine>
+
+  <shutdown>
+   <name>shutdown</name>
+   <path>Aircraft/SeaFury/Sounds/CentSdown_3.wav</path>
+   <condition>
+    <equals>
+      <property>controls/engines/engine/mixture</property>
+      <value>0.0</value>
+    </equals>
+    <greater-than>
+      <property>engines/engine/rpm</property>
+      <value>10</value>
+    </greater-than>
+   </condition>
+  </shutdown>
+
+
+  <rumble>
+   <name>rumble</name>
+   <mode>looped</mode>
+   <path>Sounds/rumble.wav</path>
+   <condition>
+    <or>
+     <property>gear/gear[0]/wow</property>
+     <property>gear/gear[1]/wow</property>
+     <property>gear/gear[2]/wow</property>
+    </or>
+    <property>sim/current-view/internal</property>
+   </condition>
+   <volume>
+    <property>velocities/airspeed-kt</property>
+    <type>log</type>
+    <factor>0.1</factor>
+   </volume>
+  </rumble>
+
+  <gear>
+   <name>gear</name>
+   <mode>in-transit</mode>
+   <path>Aircraft/SeaFury/Sounds/LMGEARUP.WAV</path>
+   <property>gear/gear[0]/position-norm</property>
+  </gear>
+
+  <squeal>
+   <name>squeal</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+    <or>
+     <property>gear/gear[0]/wow</property>
+     <property>gear/gear[1]/wow</property>
+     <property>gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>velocities/speed-down-fps</property>
+    <factor>0.5</factor>
+    <max>1.0</max>
+   </volume>
+   <volume>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+    <max>1.0</max>
+   </volume>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+   <pitch>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.0025</factor>
+    <offset>0.5</offset>
+    <max>1.0</max>
+   </pitch>
+  </squeal>
+
+<!-- 
+  <flap>
+   <name>flaps</name>
+   <mode>in-transit</mode>
+   <path>Aircraft/A-1H/Sounds/CMFLAP.WAV</path>
+   <property>surface-positions/flap-pos-norm</property>
+   <volume>
+    <factor>0.35</factor>
+   </volume>
+  </flap>
+-->
+
+  <wind>
+   <name>wind</name>
+   <mode>looped</mode>
+   <path>Sounds/wind.wav</path>
+   <condition>
+      <property>sim/current-view/internal</property>
+   </condition>
+   <property>velocities/airspeed-kt</property>
+   <volume>
+     <property>velocities/airspeed-kt</property>
+     <factor>0.000375</factor>
+     <min>0.00</min>
+     <max>0.15</max>
+   </volume>
+   <pitch>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.005</factor>
+    <offset>0.5</offset>
+    <max>1.0</max>
+   </pitch>
+  </wind>
+
+  <buffet>
+   <name>alpha-buffet</name>
+   <mode>looped</mode>
+   <condition>
+    <greater-than>
+     <property>fdm/jsbsim/aero/alpha-rad[0]</property>
+     <value>0.2</value>
+    </greater-than>
+    <not>
+     <property>gear/gear[1]/wow</property>    
+    </not>
+    <property>sim/current-view/internal</property>
+   </condition>
+   <path>Sounds/rumble.wav</path>
+   <volume>
+    <property>fdm/jsbsim/aero/alpha-rad</property>
+    <factor>15.0</factor>
+    <max>1.0</max>
+   </volume>
+   <pitch>
+    <property>fdm/jsbsim/aero/alpha-rad</property>
+    <factor>0.1</factor>
+   </pitch>
+  </buffet>
+
+  <guns>
+   <name>gunfire</name>
+   <mode>looped</mode>
+   <condition>
+    <property>controls/armament/trigger</property>
+   </condition>
+   <path>Aircraft/SeaFury/Sounds/gunfire_1.wav</path>
+  </guns>
+
+ 
+</fx>
+ 
+</PropertyList>

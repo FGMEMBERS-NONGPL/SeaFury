@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+  File:     centaurus.xml
+  Author:   Aero-Matic v 0.81
+
+  Inputs:
+    name:           centaurus
+    type:           piston
+    power:          2480.0 hp
+    augmented?      no
+    injected?       no
+-->
+
+<piston_engine name="centaurus">
+  <displacement unit="IN3"> 3270.00 </displacement>
+  <maxmp unit="INHG">   56.0 </maxmp>
+  <bore unit="IN"> 5.75 </bore>
+  <stroke unit="IN"> 7.0 </stroke>
+  <bsfc>           0.4 </bsfc>
+  <maxhp>        2480.00 </maxhp>
+  <compression-ratio> 7.2 </compression-ratio>  
+  <volumetric-efficiency>     0.775  </volumetric-efficiency>  
+  <cycles>         4.0 </cycles>
+  <cylinders> 18 </cylinders>
+  <idlerpm>      500.0 </idlerpm>
+  <maxrpm>      2700.0 </maxrpm>
+  <maxthrottle>    1.0 </maxthrottle>
+  <minthrottle>    0.1 </minthrottle>
+  <sparkfaildrop>  0.2 </sparkfaildrop>
+  <numboostspeeds> 2   </numboostspeeds>
+  <boostoverride>  0   </boostoverride>
+
+  <ratedboost1>    8.15</ratedboost1> <!-- 46.5 inHg -->
+  <ratedpower1> 1900   </ratedpower1>
+  <ratedrpm1>   2600   </ratedrpm1>
+  <ratedaltitude1> 4900 </ratedaltitude1>
+
+  <ratedboost2>    5.00</ratedboost2> 
+  <ratedpower2> 1600   </ratedpower2>
+  <ratedrpm2>   2600   </ratedrpm2>
+  <ratedaltitude2> 16000 </ratedaltitude2>
+
+  <takeoffboost> 10.85    </takeoffboost>   <!-- 52.0 inHg -->
+
+</piston_engine>

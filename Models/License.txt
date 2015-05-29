@@ -1,0 +1,23 @@
+Below is the original Copyright Information from Alpha Simulations.
+The model was provided by Alpha Simulations in MDL format, with
+textures in BMP format.  I converted these to AC3D and RGB (SGI) formats,
+respectively, for use in the FlightGear flight simulator.
+
+David Culp,  davidculp@cox.net,  15 Oct 2006
+
+
+
+
+
+COPYRIGHT INFORMATION
+
+These files are freeware.
+They are unsupported, so please do not e-mail us if you have problems. The sound and panel cfg's will need to be aliased to different aircraft (use Notepad) before this aircraft can be used in CFS2.
+
+Under no circumstances may these files be sold or uploaded to a payware site.
+
+
+All rights reserved - ALPHA SIMULATIONS 2001
+WWW.ALPHASIM.CO.UK
+
+phil@alphasim.co.uk

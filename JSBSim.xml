@@ -122,7 +122,7 @@
    <rolling_friction> 0.03 </rolling_friction>
    <spring_coeff unit="LBS/FT">      4000.00 </spring_coeff>
    <damping_coeff unit="LBS/FT/SEC"> 3000.00 </damping_coeff>
-   <max_steer unit="DEG"> -50.00 </max_steer>
+   <max_steer unit="DEG"> 50.00 </max_steer>
    <brake_group>NONE</brake_group>
    <retractable>1</retractable>
  </contact>
@@ -239,7 +239,7 @@
  <system file="FCS-pitch"/>
  <system file="FCS-roll"/>
  <system file="FCS-yaw"/>
- <system file="NWS"/>
+ <system file="TWS"/>
  <system file="alpha_buffet"/>
  <system file="dump"/>
  <system file="crash-detect"/>
@@ -275,10 +275,10 @@
           <table>
             <independentVar lookup="row">aero/alpha-rad</independentVar>
             <tableData>
-              -0.20 -0.730
-               0.00  0.170
-               0.23  1.200
-               0.60  0.582
+              -0.20 -0.630
+               0.00  0.270
+               0.23  1.300
+               0.26  0.682
             </tableData>
           </table>
       </product>
@@ -290,17 +290,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/flap-pos-norm</property>
-           <value> 0.35 </value>
-       </product>
-    </function>
-
-    <function name="aero/coefficient/dCLsb">
-       <description>Delta_Lift_due_to_speedbrake</description>
-       <product>
-           <property>aero/qbar-psf</property>
-           <property>metrics/Sw-sqft</property>
-           <property>fcs/speedbrake-pos-norm</property>
-           <value>0</value>
+           <value> 0.39 </value>
        </product>
     </function>
 
@@ -363,7 +353,7 @@
             <independentVar lookup="row">velocities/mach</independentVar>
             <tableData>
                 0.00      0.000
-                0.75      0.000
+                0.70      0.000
                 1.10      0.023
                 1.80      0.015
             </tableData>
@@ -493,17 +483,18 @@
            <value>0.005</value>
        </product>
     </function>
-
+<!--
     <function name="aero/coefficient/Clda">
        <description>Roll_moment_due_to_rigging</description>
-       <product>
-          <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
-          <property>metrics/bw-ft</property>
-          <value>0.0</value>
-       </product>
+       <description>Roll_moment_due_to_rigging</description>
+ <product>
+ <property>aero/qbar-psf</property>
+ @@ -492,7 +492,7 @@
+ <property>metrics/bw-ft</property>
+ <value>0.0</value>
+ </product>
     </function>
-
+-->
 
   </axis>
 

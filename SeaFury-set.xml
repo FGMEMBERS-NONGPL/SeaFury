@@ -6,13 +6,17 @@
 
   <description>Hawker Sea Fury</description>
   <author>David Culp, Alpha Simulations</author>
+  <status>V1.5</status>
   <flight-model>jsb</flight-model>
   <aero>JSBSim</aero>
   
   <sound>
    <audible>true</audible>
    <path>Aircraft/SeaFury/Sounds/sound-config.xml</path>
-   <volume type="double">0.26</volume>
+  <!-- <volume type="double">0.26</volume>
+   <flap-volume>0.2</flap-volume>
+   <gear-volume>0.9</gear-volume>
+   <canopy-volume>1.0</canopy-volume>-->
   </sound>
 
   <submodels> 
@@ -23,6 +27,36 @@
   <startup>
    <splash-texture>Aircraft/SeaFury/splash.png</splash-texture>
   </startup>
+
+<systems>
+     <autopilot>
+         <path>Aircraft/SeaFury/Systems/autopilot5.xml</path>
+    </autopilot>
+	 <electrical>
+      <path>Aircraft/Generic/generic-electrical.xml</path>
+    </electrical>
+ </systems>
+ 
+   <multiplay n="0">
+      <chat_display>1</chat_display>
+      <generic n="0">
+	 
+        <int n="10" alias="/sim/model/lights/running/state"/>
+        <int n="11" alias="/sim/model/lights/passing/state"/>
+        <int n="12" alias="/sim/model/lights/tail/state"/>
+        <int n="13" alias="/sim/model/lights/recognition/state"/>
+        <int n="14" alias="/sim/model/lights/recognition[1]/state"/>
+        <int n="15" alias="/sim/model/lights/recognition[2]/state"/>
+        <int n="16" alias="/sim/model/lights/formation/state"/>
+        <int n="17" alias="/controls/lighting/landing-lights"/>
+        <int n="18" alias="/controls/lighting/landing-lights[1]"/>     
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+       
+	
+	
+      </generic>
+    </multiplay>
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
@@ -92,6 +126,8 @@
     <desc>Select Stations 1 and 2</desc>
    </key>
   </help>
+  
+   <menubar include="Dialogs/menu.xml"/>
 
  </sim>
 
@@ -104,9 +140,12 @@
     <mixture>1.0</mixture>
    </engine>
   </engines>
-  <lighting>
-   <instruments-norm>0.3</instruments-norm>
-  </lighting>
+ <lighting>
+  <strobe>1</strobe>
+  <beacon>1</beacon>
+  <landing-lights>1</landing-lights>
+  <nav-lights>1</nav-lights>
+ </lighting>
   <flight>  
    <flaps>0</flaps>
    <elevator-trim>-0.16</elevator-trim>
@@ -168,16 +207,16 @@
 
     <key n="109">
      <name>m</name>
-     <desc>engage nose wheel steering</desc>
+     <desc>engage tail wheel steering</desc>
      <binding>
       <command>property-assign</command>
-      <property>fdm/jsbsim/systems/NWS/engaged</property>
+      <property>fdm/jsbsim/systems/TWS/engaged</property>
       <value>1</value> 
      </binding>
      <mod-up>
        <binding>
         <command>property-assign</command>
-        <property>fdm/jsbsim/systems/NWS/engaged</property>
+        <property>fdm/jsbsim/systems/TWS/engaged</property>
         <value>0</value> 
        </binding>
      </mod-up>
@@ -259,18 +298,15 @@
      <sim-time-sec>0</sim-time-sec>
    </simulation>
    <systems>
-    <hook>
-      <tailhook-cmd-norm type="double">0</tailhook-cmd-norm> 
-    </hook>
     <holdback>
       <holdback-cmd type="double">0</holdback-cmd>
     </holdback>
     <dump>
       <armed type="double">0</armed>
     </dump>
-    <NWS>
+    <TWS>
       <engaged type="double">0</engaged>
-    </NWS>
+    </TWS>
     <canopy>
       <command type="double">0</command>
       <position type="double">0</position>
@@ -297,4 +333,17 @@
   <rdmi-mode type="int">0</rdmi-mode> <!-- 0=TAC, 1=VOR, 2=ADF -->
  </instrumentation>
 
+  <nasal>
+    <Tiffy>
+     
+	  <file>Aircraft/SeaFury/Nasal/liveries.nas</file>
+	  
+    </Tiffy>
+ 
+  <lights>
+		   <file>Aircraft/SeaFury/Nasal/lights.nas</file>
+		</lights>
+		
+ </nasal>
+ 
 </PropertyList>

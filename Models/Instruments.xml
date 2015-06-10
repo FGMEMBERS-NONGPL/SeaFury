@@ -1,0 +1,343 @@
+<!-- A wrapper/animation file for the Hawker SeaFury 3D model -->
+
+<PropertyList>
+
+<model>
+ <path>Aircraft/Instruments-3d/chronograph/chronograph.xml</path>
+  <offsets>
+   <x-m>0.537</x-m>
+   <y-m>-0.105</y-m>
+   <z-m>0.55</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.65</y-offset>
+    <z-offset>0.65</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/attitude.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.01</y-m>
+   <z-m>0.415</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.84</x-offset>
+    <y-offset>1.3</y-offset>
+    <z-offset>1.3</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+  
+ 
+
+  <model>
+  <path>Aircraft/SeaFury/Models/Instruments/asi.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>-0.103</y-m>
+   <z-m>0.413</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.84</x-offset>
+    <y-offset>1.25</y-offset>
+    <z-offset>1.25</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/vsi.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.14</y-m>
+   <z-m>0.418</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.84</x-offset>
+    <y-offset>1.25</y-offset>
+    <z-offset>1.25</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ 
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/compass.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.015</y-m>
+   <z-m>0.305</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.84</x-offset>
+    <y-offset>1.15</y-offset>
+    <z-offset>1.15</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+  <model>
+  <path>Aircraft/SeaFury/Models/Instruments/altimeter.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>-0.091</y-m>
+   <z-m>0.3</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.84</x-offset>
+    <y-offset>1.15</y-offset>
+    <z-offset>1.15</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/turn.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.145</y-m>
+   <z-m>0.3</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.45</y-offset>
+    <z-offset>1.45</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ 
+ <!-- right -->
+ 
+  <model>
+  <path>Aircraft/SeaFury/Models/Instruments/rpm.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.253</y-m>
+   <z-m>0.475</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>.95</y-offset>
+    <z-offset>.95</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+  <model>
+  <path>Aircraft/SeaFury/Models/Instruments/oil-pressure.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.264</y-m>
+   <z-m>0.36</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+  <model>
+  <path>Aircraft/SeaFury/Models/Instruments/oil-temp.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.32</y-m>
+   <z-m>0.36</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.25</y-offset>
+    <z-offset>1.25</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/rad-temp.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.32</y-m>
+   <z-m>0.285</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.25</y-offset>
+    <z-offset>1.25</z-offset>
+   </animation>
+  </overlay>
+ </model>
+   <!--
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/20-lb-boost.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.258</y-m>
+   <z-m>0.3102</z-m>
+   <pitch-deg>-6</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.8</y-offset>
+    <z-offset>0.8</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/fuel.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>0.367</y-m>
+   <z-m>0.305</z-m>
+   <pitch-deg>-6</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.8</y-offset>
+    <z-offset>0.8</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ -->
+ <!-- Left -->
+
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/triple.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>-0.224</y-m>
+   <z-m>0.285</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.9</y-offset>
+    <z-offset>0.9</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+ <!-- 
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/magneto.ac</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>-0.34</y-m>
+   <z-m>0.39</z-m>
+   <pitch-deg>-6</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.3</y-offset>
+    <z-offset>0.5</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ -->
+  <model>
+  <path>Aircraft/SeaFury/Models/Instruments/gear/gear.xml</path>
+  <offsets>
+   <x-m>0.535</x-m>
+   <y-m>-0.301</y-m>
+   <z-m>0.28</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.95</y-offset>
+    <z-offset>0.95</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+ 
+ <model>
+  <path>Aircraft/SeaFury/Models/Instruments/flapsdeg/flapsdeg.xml</path>
+  <offsets>
+    <x-m>0.535</x-m>
+   <y-m>-0.371</y-m>
+   <z-m>0.282</z-m>
+   <pitch-deg>-1</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.5</y-offset>
+    <z-offset>1.5</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+
+
+</PropertyList>
+ 

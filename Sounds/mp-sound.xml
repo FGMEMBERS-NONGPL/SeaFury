@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+
+ <fx>
+
+	<engine>
+   <name>engstart</name>
+   <path>Aircraft/SeaFury/Sounds/fury-cranking.wav</path>
+   <property>engines/engine/cranking</property>
+   <position>
+    <x>-1.5</x>
+    <y>0.0</y>
+    <z>0.0</z>
+   </position>
+   <volume>
+    <offset>-0.4</offset>
+   </volume>
+  </engine>
+
+  <engine>
+   <name>engine-low-rpm</name>
+   <mode>looped</mode>
+   <path>Aircraft/SeaFury/Sounds/fury-ideling.wav</path>
+   <condition>
+    <property>engines/engine[0]/running</property>
+    <greater-than>
+      <property>engines/engine[0]/rpm</property>
+      <value>200</value>
+    </greater-than>
+	 <not>
+   <property>sim/current-view/internal</property>
+  </not>
+   </condition>
+  
+   <volume>
+        <property>engines/engine[0]/rpm</property>
+        <factor>0.00033</factor>
+        <min>0.2</min>
+        <max>1.0</max>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/rpm</property>
+        <factor>0.00033</factor>
+        <min>0.0</min>
+        <max>1.0</max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+  </engine>
+
+  
+  
+  
+  <shutdown>
+   <name>shutdown</name>
+   <path>Aircraft/DavePack/Sounds/CentSdown_3.wav</path>
+   <condition>
+    <equals>
+      <property>controls/engines/engine[0]/magnetos</property>
+      <value>0</value>
+    </equals>
+    <greater-than>
+      <property>engines/engine/rpm</property>
+      <value>10</value>
+    </greater-than>
+   </condition>
+  </shutdown>
+
+
+ 
+  <squeal>
+   <name>squeal</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+    <or>
+     <property>gear/gear[0]/wow</property>
+     <property>gear/gear[1]/wow</property>
+     <property>gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>velocities/speed-down-fps</property>
+    <factor>0.05</factor>
+   </volume>
+   <volume>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+   </volume>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+   <pitch>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.0025</factor>
+    <offset>1.2</offset>
+   </pitch>
+  </squeal>
+
+ 
+  
+  <crash>
+   <name>crash</name>
+   <condition>
+    <property>sim/crashed</property>
+   </condition>
+   <path>Sounds/crash.wav</path>
+  </crash>
+
+</fx>
+
+</PropertyList>
